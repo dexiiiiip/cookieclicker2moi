@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PJ Supreme Clicker</title>
+  <title>Clicker de moi</title>
   <style>
     * { box-sizing: border-box; }
     :root {
@@ -234,24 +234,24 @@
       { id: 4, icon:'🏛️', name: 'Temple du clic', cost: 450, type: 'auto', value: 5, owned: 0 },
       { id: 5, icon:'🌌', name: 'PJ cosmique', cost: 1200, type: 'click', value: 10, owned: 0 },
       { id: 6, icon:'🐒', name: 'Armée de mini PJ', cost: 2500, type: 'auto', value: 20, owned: 0 },
-      { id: 7, icon:'🧠', name: 'PJ giga cerveau', cost: 7000, type: 'click', value: 35, owned: 0 },
-      { id: 8, icon:'🚀', name: 'PJ intergalactique', cost: 15000, type: 'auto', value: 75, owned: 0 },
-      { id: 9, icon:'👑', name: 'PJ suprême', cost: 50000, type: 'click', value: 150, owned: 0 },
-      { id: 10, icon:'🛸', name: 'Culte galactique', cost: 125000, type: 'auto', value: 400, owned: 0 }
+      { id: 7, icon:'🧠', name: 'PJ giga cerveau', cost: 5000, type: 'click', value: 35, owned: 0 },
+      { id: 8, icon:'🚀', name: 'PJ intergalactique', cost: 7000, type: 'auto', value: 75, owned: 0 },
+      { id: 9, icon:'👑', name: 'PJ suprême', cost: 100000, type: 'click', value: 150, owned: 0 },
+      { id: 10, icon:'🛸', name: 'galaxie', cost: 29000, type: 'auto', value: 400, owned: 0 }
     ];
     let upgrades = JSON.parse(JSON.stringify(defaultUpgrades));
 
     const achievementsData = [
       { id:'first_click', icon:'👆', title:'Premier contact', desc:'Cliquer 1 fois', check:()=> totalClicks >= 1 },
       { id:'click_100', icon:'💥', title:'Spam sauvage', desc:'Cliquer 100 fois', check:()=> totalClicks >= 100 },
-      { id:'click_1000', icon:'⚡', title:'Doigt nucléaire', desc:'Cliquer 1000 fois', check:()=> totalClicks >= 1000 },
+      { id:'click_1000', icon:'⚡', title:'bombe nucléaire', desc:'Cliquer 1000 fois', check:()=> totalClicks >= 1000 },
       { id:'score_1k', icon:'💰', title:'Petit dealer', desc:'Atteindre 1 000 PJ', check:()=> pj >= 1000 },
-      { id:'score_100k', icon:'🏦', title:'Banquier simiesque', desc:'Atteindre 100 000 PJ', check:()=> pj >= 100000 },
-      { id:'auto_50', icon:'🏭', title:'Usine PJ', desc:'Avoir 50 PJ/sec', check:()=> autoPj >= 50 },
+      { id:'score_100k', icon:'🏦', title:'Banquier', desc:'Atteindre 100 000 PJ', check:()=> pj >= 100000 },
+      { id:'auto_50', icon:'🏭', title:'Usine', desc:'Avoir 50 PJ/sec', check:()=> autoPj >= 50 },
       { id:'combo_3', icon:'🔥', title:'En feu', desc:'Atteindre Combo x3', check:()=> combo >= 3 },
       { id:'prestige_1', icon:'✨', title:'Ascension', desc:'Faire 1 prestige', check:()=> prestige >= 1 },
       { id:'upgrade_10', icon:'🛍️', title:'Client fidèle', desc:'Acheter 10 upgrades', check:()=> upgrades.reduce((a,b)=>a+b.owned,0) >= 10 },
-      { id:'god', icon:'🦍', title:'Dieu PJ', desc:'Atteindre 1 000 000 PJ', check:()=> pj >= 1000000 }
+      { id:'god', icon:'🦍', title:'Dieu', desc:'Atteindre 1 000 000 PJ', check:()=> pj >= 1000000 }
     ];
     let unlockedAchievements = [];
 
